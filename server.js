@@ -8,6 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
+// 🔹 Activa CORS solo para tu GitHub Pages
+app.use(cors({
+  origin: 'https://josems22.github.io', // tu dominio en GitHub Pages
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type']
+}));
+
 // Middleware para parsear JSON (fundamental para recibir datos del cliente)
 app.use(express.json());
 
