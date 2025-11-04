@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
+// forzar redeploy en Render
 // 🔹 Activa CORS solo para tu GitHub Pages
 app.use(cors({
   origin: 'https://josems22.github.io', // tu dominio en GitHub Pages
